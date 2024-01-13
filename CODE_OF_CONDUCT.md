@@ -67,7 +67,7 @@ Additionally, community organizers are available to help community members engag
 
 If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify Telebirr-ethionet-et with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies. [Policy](https://play.google.com/store/apps/details?id=cn.tydic.ethiopay&hl=en&gl=US/ 1:551408497442:android:499cd272caec0d40ab2b7b)
 
-Telebirr integration 
+Telebirr integration
 
 ## 9. Scope
 
@@ -81,7 +81,7 @@ Congratulations62@outlook.com
 
 ## 11. License and attribution
 
-The Citizen Code of Conduct is distributed by [Stumptown Syndicate](http://stumptownsyndicate.org) under a [Creative Commons Attribution-ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/). 
+The Citizen Code of Conduct is distributed by [Stumptown Syndicate](http://stumptownsyndicate.org) under a [Creative Commons Attribution-ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/).
 
 Portions of text derived from the [Django Code of Conduct](https://www.djangoproject.com/conduct/) and the [Geek Feminism Anti-Harassment Policy](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy).
 
