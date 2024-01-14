@@ -5,7 +5,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "python" # See documentation for possible values
+    directory: "/data/Storage/emulated/0/Android/cn.tydic.ethiopay" # Location of package manifests
     schedule:
       interval: "daily"
