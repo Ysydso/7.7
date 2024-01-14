@@ -1,22 +1,51 @@
-# This workflow will triage pull requests and apply a label based on the
-# paths that are modified in the pull request.
-#
-# To use this workflow, you will need to set up a .github/labeler.yml
-# file with configuration.  For more information, see:
-# https://github.com/actions/labeler
+"C++":
+  - cpp/**/*
+  - change-notes/**/*cpp*
 
-name: Labeler
-on: [pull_request_target]
+"C#":
+  - csharp/**/*
+  - change-notes/**/*csharp*
 
-jobs:
-  label:
+Go:
+  - go/**/*
+  - change-notes/**/*go.*
 
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+Java:
+  - any: [ 'java/**/*', '!java/kotlin-extractor/**/*', '!java/ql/test/kotlin/**/*' ]
+  - change-notes/**/*java.*
 
-    steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+JS:
+  - any: [ 'javascript/**/*', '!javascript/ql/experimental/adaptivethreatmodeling/**/*' ]
+  - change-notes/**/*javascript*
+
+Kotlin:
+  - java/kotlin-extractor/**/*
+  - java/ql/test/kotlin/**/*
+
+Python:
+  - python/**/*
+  - change-notes/**/*python*
+
+Ruby:
+  - ruby/**/*
+  - change-notes/**/*ruby*
+
+Swift:
+  - swift/**/*
+  - change-notes/**/*swift*
+
+documentation:
+  - "**/*.qhelp"
+  - "**/*.md"
+  - docs/**/*
+
+"QL-for-QL":
+  - ql/**/*
+  - .github/workflows/ql-for-ql*
+
+# Since these are all shared files that need to be synced, just pick _one_ copy of each.
+"DataFlow Library":
+  - "shared/dataflow/**/*"
+
+"ATM":
+  - javascript/ql/experimental/adaptivethreatmodeling/**/*
