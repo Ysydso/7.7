@@ -1,0 +1,48 @@
+name: Actions to take on pushes to main
+on:
+  push:
+    branches:
+    - main
+  schedule:
+  - cron: '*/15 * * * *'
+  workflow_dispatch:
+jobs:
+  analysis:
+    continue-on-error: false
+    name: Analysis
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 64
+    - uses: google/osv/actions/analyze@master
+      with:
+        analyze-git: false
+        pr-base: HEAD~63
+        skip-pattern: '.github/workflows/.*'
+    - run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+    - run: git diff --cached --quiet || git commit -m 'Analysis'
+    - run: git push
+  assign:
+    needs: analysis
+    continue-on-error: false
+    name: Assign IDs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-go@v2
+      with:
+        go-version: '^1.16.4'
+    - run: |
+        go install github.com/google/osv/vulnfeeds/cmd/ids@latest
+        ids -dir=./vulns -prefix PYSEC
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+      env:
+        GONOPROXY: github.com/google/osv
+    - run: git diff --cached --quiet || git commit -m 'Assign IDs'
+    - run: git push
