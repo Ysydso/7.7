@@ -1,0 +1,9 @@
+{
+"macleServiceType": "app",
+"frameworkUrl": "file:///android_asset/framework.zip",
+"macleServerUrl": "http://159.138.96.191:7000/macle-cloud/api/app/miniapp-management/v1/",
+"appcubeUrl": "https://196.188.120.4:32000/",
+"appcubeClientId": "eaf9c131712c4aa4a1710a592fe1f576",
+"appcubeClientSecret": "372365a359141c10c0f3429b9dc048c6284c632196d4bf17",
+"maxMiniAppRecentUseNum": 8
+}
