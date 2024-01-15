@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?><manifest versionCode="10107350" versionName="1.1.7.350" compileSdkVersion="33" compileSdkVersionCodename="13" package="cn.tydic.ethiopay" platformBuildVersionCode="33" platformBuildVersionName="13">
+  <uses-sdk minSdkVersion="21" targetSdkVersion="33"/>
+  <uses-permission name="android.permission.INTERNET"/>
+  <uses-permission name="android.permission.POST_NOTIFICATIONS"/>
+  <uses-permission name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission name="android.permission.READ_CONTACTS"/>
+  <uses-permission name="android.permission.RECORD_AUDIO"/>
+  <uses-permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission name="android.permission.WAKE_LOCK"/>
+  <uses-permission name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+  <uses-permission name="android.permission.VIBRATE"/>
+  <queries>
+    <package name="com.huawei.ethiopia.sdk.sit"/>
+    <package name="com.topjohnwu.magisk"/>
+    <intent>
+      <action name="android.intent.action.MAIN"/>
+    </intent>
+    <intent>
+      <action name="android.intent.action.VIEW"/>
+    </intent>
+    <package name="com.google.android.apps.maps"/>
+  </queries>
+  <uses-permission name="android.permission.CAMERA"/>
+  <uses-permission name="android.permission.READ_MEDIA_AUDIO"/>
+  <uses-permission name="android.permission.READ_MEDIA_VIDEO"/>
+  <uses-permission name="android.permission.READ_MEDIA_IMAGES"/>
+  <uses-permission name="android.permission.USE_FACERECOGNITION"/>
+  <uses-permission name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission name="android.permission.USE_BIOMETRIC"/>
+  <uses-permission name="android.permission.USE_FINGERPRINT"/>
+  <uses-permission name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <uses-permission name="com.google.android.c2dm.permission.RECEIVE"/>
+  <uses-permission name="com.google.android.gms.permission.AD_ID"/>
+  <uses-feature glEsVersion="0x20000" required="true"/>
+  <uses-feature name="android.hardware.camera" required="false"/>
+  <uses-feature name="android.hardware.camera.front" required="false"/>
+  <uses-feature name="android.hardware.camera.autofocus" required="false"/>
+  <uses-feature name="android.hardware.camera.flash" required="false"/>
+  <uses-feature name="android.hardware.screen.landscape" required="false"/>
+  <uses-feature name="android.hardware.wifi" required="false"/>
+  <uses-permission name="android.permission.FLASHLIGHT"/>
+  <application theme="Theme.Consumerethiopia" label="telebirr" icon="res/qn2.png" name="com.huawei.payment.base.App" allowBackup="false" supportsRtl="true" resizeableActivity="true" supportsPictureInPicture="true" networkSecurityConfig="res/4u.xml" roundIcon="res/qn2.png" appComponentFactory="androidx.core.app.CoreComponentFactory" requestLegacyExternalStorage="true">
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.activity.HomeActivity" exported="false" screenOrientation="1" configChanges="0xd80"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.search.SearchActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.balance.MyRewardBalanceActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.balance.MyBalanceActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.activity.MyVisaPanActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.activity.PinOfVisaActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.CustomerHomeVersion6_0Module" name="com.huawei.digitalpayment.customer.homev6.activity.VisaPanResultActivity" exported="false" screenOrientation="1"/>
+    <activity theme="SplashTheme" name="com.huawei.module_basic_ui.splash.LauncherActivity" exported="true" screenOrientation="1">
+      <intent-filter>
+        <action name="android.intent.action.MAIN"/>
+        <category name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+        <action name="android.intent.action.VIEW"/>
+        <category name="android.intent.category.DEFAULT"/>
+        <category name="android.intent.category.BROWSABLE"/>
+        <data scheme="ethiopia"/>
+      </intent-filter>
+      <intent-filter>
+        <action name="com.ethiotelecom.telebirr.customer.uat.easier.dev.JUMP_APP_ACTION"/>
+        <category name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
+    <activity theme="SplashTheme" name="com.huawei.module_basic_ui.splash.SplashActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.splash.GuideActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.about.AboutActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.balance.MyBalanceActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.successpage.CommonSuccessActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.successpage.H5StartPaySuccessActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.help_feedback.HelpFeedbackActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.language.LanguageActivity" screenOrientation="1"/>
+    <activity theme="ActivityDialogStyle" name="com.huawei.module_basic_ui.language.LanguageDialogActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_basic_ui.share.AppShareActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.push.notification.NotificationActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.push.NotificationFilterActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.push.notification.NotificationRecordsActivity" screenOrientation="1"/>
+    <service name="com.huawei.push.service.NotificationService" exported="false">
+      <intent-filter>
+        <action name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <meta-data name="com.google.firebase.messaging.default_notification_icon" resource="icon_logo"/>
+    <meta-data name="com.google.firebase.messaging.default_notification_color" resource="black"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_profile.ProfileEditActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_profile.PhotoProfileActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_profile.ProfileActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_history.HistoryDetailActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_history.RecordActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_transfer.ui.transfer.P2pTransferConfirmActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_transfer.ui.transfer.VerifyNumberActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.login.PinOfLoginActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.login.LoginFirstActivity" exported="false" launchMode="2" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.login.CodeOfLoginActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.register.CodeOfRegisterActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.register.RegisterReviewActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.register.QuickRegisterActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.resetpin.ResetPinNoPhneActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.register.InformationOfRegisterActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.registerverify.RegisterNrcVerifyActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.registerverify.RegisterInputInfoActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.login.NewDeviceVerifyOtpActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.login.BiometricLoginActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.biometric.BiometricSwitchActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.biometric.BiometricPaySwitchActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.biometric.OpenBiometricLoginIdentifyPinActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.resetpin.ResetPinOtpActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.resetpin.ResetPinSecretActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.resetpin.ResetPinCommitActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.activation.AccountActiveActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.modifypin.ModifyPinActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.activation.SetEncryptedProblemActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.digitalpayment.customer.login_module.resetpin.ResetPinInvalidActivity" exported="false" screenOrientation="1"/>
+    <activity name="com.huawei.webview.module.MainActivity" exported="false"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.webview.WebViewActivity" screenOrientation="1" hardwareAccelerated="true"/>
+    <activity theme="AppTheme.Transparent" name="com.huawei.webview.WebDispatcherActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.webview.MerchantDispatcherActivity"/>
+    <activity theme="AppTheme.Transparent" name="com.huawei.webview.coupon.CouponDispatcherActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.chat.chat_room.CameraPreviewActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.common.ChatVideoPlayActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.common.ChatImagePreviewActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.common.SelectImagePreviewActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ChatRegionSetActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ChatPhotoProfileSetActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ChatNickNameSetActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ChatGenderSetActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.pocket_money.PocketMoneyConfirmActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.pocket_money.PocketMoneySendActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.chat.chat_room.ChatActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat_list.ChatMiniAppActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.official_account.DetailSettingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.SearchNumberActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ContactFriendActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.NewFriendActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.UserInfoActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.official_account_search.OfficialAccountsSearchListActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.official_account_search.AccountSearchActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.official_account.SearchHistoryArticleActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.OfficialAccountFollowedActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.official_account.OfficialAccountRecommendedActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.AddContactActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.MyQrCodeActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.SendFriendRequestActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ChatSettingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.SearchMobileContactActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.SelectContactActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.ContactDetailSettingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.contact.EditNoteNameActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.transfer.ChatTransferDetailsActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.SelectGroupContactActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.GroupChatInfoActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.EditGroupNameActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.GroupMembersActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.AddGroupContactActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppThemeChat" name="com.huawei.kbz.chat.groupChat.DeleteGroupContactActivity" exported="false" screenOrientation="1"/>
+    <receiver name="com.shinemo.base.push.NetWorkReceiver"/>
+    <meta-data name="com.google.android.gms.version" value="12451000"/>
+    <meta-data name="com.google.android.geo.API_KEY" value="AIzaSyDEyj7Xmxl01jsbbb2-MBFj-W5hHRmAKyA"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.customer.digitalpayment.miniapp.macle.EasierDispatcherActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.customer.digitalpayment.miniapp.macle.requestpin.RequestPinActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.customer.digitalpayment.miniapp.macle.api.StartPayActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.customer.digitalpayment.miniapp.macle.ui.activity.MacleMiniAppSearchActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.customer.digitalpayment.miniapp.macle.MacleDispatcherActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.customer.digitalpayment.miniapp.macle.ui.activity.MacleMiniAppActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.qrcode.receive.ReceiveCodeActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.qrcode.receive.SetQrCodeAmountActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.qrcode.scan.ScanAndPayActivity" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.transfer.activity.TransferToBankActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.transfer.activity.TransferToWalletActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.transfer.activity.TransferToBankInputAmountActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.link.IdentifyPinActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.link.BankAccountDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.link.BankAccountListActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.link.LinkYourBankAccountActivity" exported="false" screenOrientation="1"/>
+    <activity theme="Theme.BankAccount" name="com.huawei.bank.link.LinkYourBankAccountNextActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.IntroductionActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashOutNumberActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashOutCategoryActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashOutAmountActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashInQrCodeActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashInCategoryActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.CashInAmountActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.chapa.activity.CashInViaChapaActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_cash.CashInputPinActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.WithDrawCashGuideActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.withdrawcash.WithDrawCashInputCodeActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.withdrawcash.WithDrawCashInAtmActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.withdrawcash.WithDrawCashInputMoneyActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_cash.paymoney.Cash2oMerchantCheckStandActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.withdrawcash.ApplyAtmVoucherSuccessActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_cash.withdrawcash.WithdrawCashInputPinActivity"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.topup.ui.TopUpActivity" exported="false"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.topup.ui.SingleOperatorActivity" exported="false"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.paybill.activity.PayBillActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.paybill.activity.BillDetailsActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.buyairtime.activity.BuyAirTimeActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.payformerchant.activity.PayForMerchantActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.payformerchant.activity.PayForMerchantConfirmActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.schedule.activity.AutomaticPaymentActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.schedule.activity.CreateAutomaticPaymentActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.schedule.activity.CreateAutomaticPaymentSelectTypeActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.payformerchant.activity.PayCNetActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.TopUp" name="com.huawei.digitalpayment.fuel.activity.FuelPaymentActivity" exported="false" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.digitalpayment.fuel.activity.PayFuelActivity" exported="false"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.FinanceServiceActivity" exported="false" launchMode="2" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.FinanceLoanHomeActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.ApplyLoanProductActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.FinanceResultActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.LoanContractDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.SavingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.SavingProductDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.DepositWithDrawActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.ActiveSavingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.od.activity.CreditPayHomeActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.od.activity.CreditPayContractDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.od.activity.FinanceAgreementActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.MyTelebirrTelaActivity" exported="false" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.ethiopia.finance.loan.activity.FinanceLoanRepayActivity" exported="false" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.ethiopia.finance.loan.activity.FinanceDispacherActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.LockedSavingAccountActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.LockedSavingProductDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.LockedSavingAccountDetailActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.saving.activity.LockedClosedSavingActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.FinanceServiceConfigActivity" exported="false" launchMode="2" screenOrientation="1"/>
+    <activity theme="AppTheme.Finance" name="com.huawei.ethiopia.finance.loan.activity.FinanceServiceCBEActivity" exported="false" launchMode="2" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.confirm.PaymentConfirmActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.inapp.activity.InAppPayActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.p2ptransfer.activity.P2PTransferPayActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.transfer2merchant.activity.Transfer2MerchantActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.p2ptransfer.activity.SendMoneyInputPhoneActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.p2ptransfer.activity.P2PTransferCheckStandActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.inapp.activity.InAppCheckStandActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.transfer2merchant.activity.Transfer2oMerchantCheckStandActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.htmlpay.activity.H5PayConfirmActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.htmlpay.activity.H5PayCheckStandActivity"/>
+    <activity theme="OrderTheme" name="com.huawei.module_checkout.inapp.PaySdkEnterActivity" exported="true"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.od.SubscribeConsumerODActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_checkout.htmlpay.activity.YijieH5PayConfirmActivityActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.batchtransfer.BatchTransferStandActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.deposit.activity.DepositCashActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.deposit.activity.ApplyDepositVoucherActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.deposit.activity.ApplyDepositVoucherSuccessActivity" screenOrientation="1"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.module_cash.deposit.activity.DepositCashAgentActivity" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.startpay.activity.StartPayEnterActivity"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.module_checkout.checkstand.common.CommonCheckStandActivity"/>
+    <activity theme="AppTheme.Check" name="com.huawei.module_checkout.confirm.CheckStandODConfirmActivity" exported="false" screenOrientation="1"/>
+    <activity theme="AppTheme.Check" name="com.huawei.module_checkout.bill_share.BillShareConfirmActivity" exported="false" screenOrientation="1"/>
+    <activity theme="ActivityTranslucent" name="com.huawei.pwamodule.payment.PwaDispatcherActivity" exported="true" excludeFromRecents="true">
+      <intent-filter>
+        <data scheme="telebirrcustomerapp"/>
+        <action name="android.intent.action.VIEW"/>
+        <category name="android.intent.category.DEFAULT"/>
+        <category name="android.intent.category.BROWSABLE"/>
+      </intent-filter>
+    </activity>
+    <activity theme="AppTheme.Transparent" name="com.huawei.pwamodule.payment.GetAccessTokenActivity"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.widget.card_capture.CaptureActivity" exported="false" screenOrientation="1" keepScreenOn="true"/>
+    <activity theme="AppTheme.NoActionBar" name="com.huawei.kbz.widget.card_capture.CaptureConfirmActivity" exported="false" screenOrientation="1" keepScreenOn="true"/>
+    <provider name="com.huawei.digitalpayment.customer.baselib.utils.upgrade.provider.DownloadFileProvider" exported="false" authorities="cn.tydic.ethiopay.baselib.fileProvider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="update_file_path"/>
+    </provider>
+    <provider name="com.huawei.common.provider.CommonFileProvider" exported="false" authorities="cn.tydic.ethiopay.common.fileProvider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="common_file_path"/>
+    </provider>
+    <activity theme="CropTheme" name="com.yalantis.ucrop.UCropActivity" screenOrientation="1"/>
+    <activity theme="Theme.Macle.NoAction" name="com.huawei.astp.macle.ui.ScanCodeActivity" screenOrientation="10"/>
+    <activity theme="Theme.Macle.NoAction" name="com.huawei.astp.macle.ui.PreviewImageActivity"/>
+    <service name="com.huawei.astp.macle.service.WorkService" enabled="true" exported="false" process=":workProcess"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity0" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity0" process=":MultiProcessActivity0" taskAffinity=".MultiProcessActivity0" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity1" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity1" process=":MultiProcessActivity1" taskAffinity=".MultiProcessActivity1" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity2" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity2" process=":MultiProcessActivity2" taskAffinity=".MultiProcessActivity2" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity3" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity3" process=":MultiProcessActivity3" taskAffinity=".MultiProcessActivity3" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity4" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity4" process=":MultiProcessActivity4" taskAffinity=".MultiProcessActivity4" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="MultiProcessActivity5" name="com.huawei.astp.macle.ui.MultiProcessBaseActivity$MultiProcessActivity5" process=":MultiProcessActivity5" taskAffinity=".MultiProcessActivity5" launchMode="2" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity0" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity0" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity1" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity1" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity2" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity2" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity3" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity3" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity4" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity4" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.NoAction" label="SingleProcessActivity5" name="com.huawei.astp.macle.ui.SingleProcessBaseActivity$SingleProcessActivity5" launchMode="0" configChanges="0x2494" windowSoftInputMode="0x22"/>
+    <activity theme="Theme.Macle.Setting" name="com.huawei.astp.macle.ui.AuthSettingActivity" exported="false" excludeFromRecents="false" configChanges="0x24a4"/>
+    <activity theme="Theme.Macle.Setting" name="com.huawei.astp.macle.ui.RatingActivity" exported="false" excludeFromRecents="false" configChanges="0x24a4" windowSoftInputMode="0x2"/>
+    <provider name="com.huawei.astp.macle.provider.MacleFileProvider" exported="false" authorities="cn.tydic.ethiopay.macle.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="file_paths"/>
+    </provider>
+    <meta-data name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" value="GlideModule"/>
+    <activity theme="ActivityTranslucent" name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess" exported="false" configChanges="0x4a0" windowSoftInputMode="0x3"/>
+    <activity theme="ActivityTranslucent" name="com.blankj.utilcode.util.UtilsTransActivity" exported="false" multiprocess="true" configChanges="0x4a0" windowSoftInputMode="0x3"/>
+    <provider name="com.blankj.utilcode.util.UtilsFileProvider" exported="false" authorities="cn.tydic.ethiopay.utilcode.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="util_code_provider_paths"/>
+    </provider>
+    <service name="com.blankj.utilcode.util.MessengerUtils$ServerService" exported="false">
+      <intent-filter>
+        <action name="cn.tydic.ethiopay.messenger"/>
+      </intent-filter>
+    </service>
+    <activity theme="CropTheme" name="com.huawei.payment.lib.image.crop.CropActivity" screenOrientation="1"/>
+    <service name="androidx.camera.core.impl.MetadataHolderService" enabled="false" exported="false">
+      <meta-data name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+    </service>
+    <activity theme="Theme.Translucent.NoTitleBar" name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" exported="false" excludeFromRecents="true"/>
+    <service name="com.google.android.gms.auth.api.signin.RevocationBoundService" permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" exported="true" visibleToInstantApps="true"/>
+    <receiver name="com.google.android.gms.measurement.AppMeasurementReceiver" enabled="true" exported="false"/>
+    <service name="com.google.android.gms.measurement.AppMeasurementService" enabled="true" exported="false"/>
+    <service name="com.google.android.gms.measurement.AppMeasurementJobService" permission="android.permission.BIND_JOB_SERVICE" enabled="true" exported="false"/>
+    <receiver name="com.google.firebase.iid.FirebaseInstanceIdReceiver" permission="com.google.android.c2dm.permission.SEND" exported="true">
+      <intent-filter>
+        <action name="com.google.android.c2dm.intent.RECEIVE"/>
+      </intent-filter>
+    </receiver>
+    <service name="com.google.firebase.messaging.FirebaseMessagingService" exported="false" directBootAware="true">
+      <intent-filter priority="-500">
+        <action name="com.google.firebase.MESSAGING_EVENT"/>
+      </intent-filter>
+    </service>
+    <service name="com.google.firebase.components.ComponentDiscoveryService" exported="false" directBootAware="true">
+      <meta-data name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+      <meta-data name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <uses-library name="org.apache.http.legacy" required="false"/>
+    <activity theme="Theme.Translucent.NoTitleBar" name="com.google.android.gms.common.api.GoogleApiActivity" exported="false"/>
+    <provider name="com.google.firebase.provider.FirebaseInitProvider" exported="false" authorities="cn.tydic.ethiopay.firebaseinitprovider" initOrder="100" directBootAware="true"/>
+    <service name="androidx.room.MultiInstanceInvalidationService" exported="false" directBootAware="true"/>
+    <provider name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" exported="false" multiprocess="true" authorities="cn.tydic.ethiopay.lifecycle-process"/>
+    <uses-library name="androidx.window.extensions" required="false"/>
+    <uses-library name="androidx.window.sidecar" required="false"/>
+    <service name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" exported="false">
+      <meta-data name="backend:com.google.android.datatransport.cct.CctBackendFactory" value="cct"/>
+    </service>
+    <service name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" permission="android.permission.BIND_JOB_SERVICE" exported="false"/>
+    <receiver name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" exported="false"/>
+    <activity theme="zxing_CaptureTheme" name="com.journeyapps.barcodescanner.CaptureActivity" clearTaskOnLaunch="true" stateNotNeeded="true" screenOrientation="6" windowSoftInputMode="0x3"/>
+    <meta-data name="com.android.vending.derived.apk.id" value="1"/>
+  </application>
+</manifest>
+
