@@ -6,15 +6,16 @@ import json
 import re
 
 import requests
-from Crypto.Cipher import PKCS1_v1_5
+from Crypto.Cipher import PKCS1_OAEP
 from Crypto.PublicKey import RSA
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.asymmetric.padding import PKCS1v15
+from cryptography.hazmat.primitives.asymmetric.padding import OAEP, MGF1
 from cryptography.hazmat.primitives.serialization import load_der_public_key
+import os
 
 
 class Telebirr:
-    api = "http://196.188.120.3:10443/service-openup/toTradeWebPay"
+    api = os.getenv("API_URL", "https://196.188.120.3:10443/service-openup/toTradeWebPay")
 
     def __init__(
         self,
@@ -30,7 +31,7 @@ class Telebirr:
         total_amount,
         nonce,
         out_trade_no,
-        api="http://196.188.120.3:10443/service-openup/toTradeWebPay",
+        api = os.getenv("API_URL", "https://196.188.120.3:10443/service-openup/toTradeWebPay")
     ):
         self.api = api
         self.app_id = app_id
@@ -67,13 +68,8 @@ class Telebirr:
     @staticmethod
     def encrypt(public_key, msg):
         rsa = RSA.importKey(public_key)
-        cipher = PKCS1_v1_5.new(rsa)
-        ciphertext = b""
-        for i in range(0, len(msg) // 117):
-            ciphertext += cipher.encrypt(msg[i * 117 : (i + 1) * 117].encode("utf8"))
-        ciphertext += cipher.encrypt(
-            msg[(len(msg) // 117) * 117 : len(msg)].encode("utf8")
-        )
+        cipher = PKCS1_OAEP.new(rsa)
+        ciphertext = cipher.encrypt(msg.encode("utf8"))
         return base64.b64encode(ciphertext).decode("ascii")
 
     @staticmethod
@@ -111,13 +107,12 @@ class Telebirr:
         key = load_der_public_key(base64.b64decode(b64data), default_backend())
 
         signature = base64.b64decode(payload)
-        decrypted = b""
-        for i in range(0, len(signature), 256):
-            partial = key.recover_data_from_signature(
-                signature[i : i + 256 if i + 256 < len(signature) else len(signature)],
-                PKCS1v15(),
-                None,
-            )
-            decrypted += partial
-
+        decrypted = key.decrypt(
+            signature,
+            OAEP(
+                mgf=MGF1(algorithm=hashlib.sha256()),
+                algorithm=hashlib.sha256(),
+                label=None,
+            ),
+        )
         return json.loads(decrypted)
