@@ -1,1 +1,0 @@
-from telebirr.telebirr import *
