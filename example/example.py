@@ -1,5 +1,4 @@
-import os
-TelebirrPrivateKey = os.environ.get("TELEBIRR_PRIVATE_KEY")
-TelebirrAppKey = os.environ.get("TELEBIRR_APP_KEY")
-TelebirrAppID = os.environ.get("TELEBIRR_APP_ID")
-TelebirrShortCode = os.environ.get("TELEBIRR_SHORT_CODE")
+TelebirrPrivateKey = "TELEBIRR PUBLIC KEY"
+TelebirrAppKey = "AIzaSyDEyj7Xmxl01jsbbb2-MBFj-W5hHRmAKyA"
+TelebirrAppID = "1:551408497442:android:499cd272caec0d40ab2b7b"
+TelebirrShortCode = "2005"

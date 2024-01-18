@@ -11,12 +11,10 @@ from Crypto.PublicKey import RSA
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric.padding import PKCS1v15
 from cryptography.hazmat.primitives.serialization import load_der_public_key
-import os
 
 
 class Telebirr:
-    
-    api = os.getenv("API_URL", "https://196.188.120.3:10443/service-openup/toTradeWebPay")
+    api = "http://196.188.120.3:10443/service-openup/toTradeWebPay"
 
     def __init__(
         self,
@@ -32,7 +30,7 @@ class Telebirr:
         total_amount,
         nonce,
         out_trade_no,
-        api=api,
+        api="http://196.188.120.3:10443/service-openup/toTradeWebPay",
     ):
         self.api = api
         self.app_id = app_id
@@ -68,13 +66,15 @@ class Telebirr:
 
     @staticmethod
     def encrypt(public_key, msg):
-        rsa_key = load_der_public_key(public_key.encode(), default_backend())
-        cipher = rsa_key.encrypt(
-            msg.encode("utf-8"),
-            padding=PKCS1v15()
+        rsa = RSA.importKey(public_key)
+        cipher = PKCS1_v1_5.new(rsa)
+        ciphertext = b""
+        for i in range(0, len(msg) // 117):
+            ciphertext += cipher.encrypt(msg[i * 117 : (i + 1) * 117].encode("utf8"))
+        ciphertext += cipher.encrypt(
+            msg[(len(msg) // 117) * 117 : len(msg)].encode("utf8")
         )
-        ciphertext = base64.b64encode(cipher).decode("ascii")
-        return ciphertext
+        return base64.b64encode(ciphertext).decode("ascii")
 
     @staticmethod
     def __sign(ussd, app_key):
